@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Liberu\Foundation\OrganizationsTeamsLivewire;
 
 use Illuminate\Support\ServiceProvider;
+use Liberu\Foundation\OrganizationsTeamsLivewire\Livewire\CreateTeam;
 use Liberu\Foundation\OrganizationsTeamsLivewire\Livewire\Overview;
 use Livewire\Livewire;
 
@@ -14,5 +15,6 @@ final class OrganizationsTeamsLivewireServiceProvider extends ServiceProvider
     {
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'organizations-teams-livewire');
         Livewire::component('organizations-teams-livewire-overview', Overview::class);
+        Livewire::component('organizations-teams-create-team', CreateTeam::class);
     }
 }
